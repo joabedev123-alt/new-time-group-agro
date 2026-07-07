@@ -208,7 +208,7 @@ export default function LandingPage() {
               { name: "NPK 20 05 20", media: "/images/05.mp4", desc: "Aplicações em cobertura, com alto teor de nitrogênio." },
               { name: "04 30 10", media: "/images/06.mp4", desc: "Sacaria 50kg" },
               { name: "KCL", media: "/images/07.mp4", desc: "Fosfato fonte de Fósforo, Cálcio e Enxofre." },
-              { name: "Super Triplo", media: "/images/11.mp4", desc: "Alta concentração de Fósforo (P2O5)." },
+              { name: "SSP 18%", media: "/images/11.mp4", desc: "Alta concentração de Fósforo (P2O5)." },
               { name: "NPK Avariado", media: "/images/29.mp4", desc: "Excelente custo-benefício, mantendo os níveis nutricionais." },
               { name: "Cloreto de Potássio", media: "/images/33.mp4", desc: "Principal fonte de potássio na agricultura." },
               { name: "Fosfato (MAP)", media: "/images/37.mp4", desc: "Alta concentração de fósforo para arranque inicial." },
