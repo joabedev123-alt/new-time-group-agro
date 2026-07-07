@@ -296,24 +296,21 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
               {/* Contato Left */}
-              <div className="text-center md:text-left">
-                <h2 className="text-3xl md:text-5xl font-serif text-gray-900 mb-6">Pronto para fechar negócio?</h2>
-                <div className="mb-8 rounded-3xl overflow-hidden border border-gray-200 w-full max-w-[320px] mx-auto md:mx-0 shadow-xl">
-                  <img src="/images/10.jpeg" alt="Atendimento New Time Group" className="w-full h-auto object-cover block opacity-90" />
-                </div>
-                <p className="text-gray-600 text-base md:text-lg mb-10 font-light max-w-md mx-auto md:mx-0">
+              <div className="text-center md:text-left flex flex-col justify-center">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Pronto para fechar negócio?</h2>
+                <p className="text-gray-800 text-lg md:text-xl mb-10 font-medium max-w-md mx-auto md:mx-0 leading-relaxed">
                   Nossa equipe responderá em poucos minutos com as melhores cotações do mercado.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-full font-bold transition-all text-center flex items-center justify-center gap-2 shadow-lg">
-                    <i className="bi bi-whatsapp"></i> (48) 98832-4762
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] shadow-lg shadow-green-900/20 text-white px-8 py-5 rounded-full font-bold text-xl transition-all text-center flex items-center justify-center gap-3">
+                    <i className="bi bi-whatsapp text-2xl"></i> (48) 98832-4762
                   </a>
                 </div>
               </div>
 
               {/* FAQ Right */}
-              <div id="faq">
-                <h3 className="text-3xl font-serif text-gray-900 mb-8">Dúvidas Frequentes</h3>
+              <div id="faq" className="flex flex-col justify-center mt-8 lg:mt-0">
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Dúvidas Frequentes</h3>
                 <div className="space-y-4">
                   {[
                     { q: "Quais regiões vocês atendem?", a: "Atendemos todo o território nacional com uma logística otimizada." },
