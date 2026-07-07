@@ -164,28 +164,30 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              { name: "MAP 11 52 00", media: "/images/03.mp4", desc: "Fórmulas ideais para o plantio, ricas em fósforo." },
-              { name: "NPK 20 05 20", media: "/images/05.mp4", desc: "Aplicações em cobertura, com alto teor de nitrogênio." },
-              { name: "04 30 10", media: "/images/06.mp4", desc: "Sacaria 50kg" },
-              { name: "KCL", media: "/images/07.mp4", desc: "Fosfato fonte de Fósforo, Cálcio e Enxofre." },
-              { name: "SSP 18%", media: "/images/11.mp4", desc: "Alta concentração de Fósforo (P2O5)." },
-              { name: "NPK 20 15 20", media: "/images/37.mp4", desc: "Alta concentração de fósforo para arranque inicial." },
+              { name: "MAP 11 52 00", desc: "Fórmulas ideais para o plantio, ricas em fósforo." },
+              { name: "NPK 20 05 20", desc: "Aplicações em cobertura, com alto teor de nitrogênio." },
+              { name: "04 30 10", desc: "Sacaria 50kg" },
+              { name: "KCL", desc: "Fosfato fonte de Fósforo, Cálcio e Enxofre." },
+              { name: "SSP 18%", desc: "Alta concentração de Fósforo (P2O5)." },
+              { name: "NPK 20 15 20", desc: "Alta concentração de fósforo para arranque inicial." },
             ].map((prod, index) => (
-              <motion.div key={index} whileHover={{ y: -10 }} className={`rounded-3xl overflow-hidden border border-gray-200 flex flex-col h-full mx-auto w-full max-w-sm ${index === 1 ? 'bg-gradient-to-b from-green-50 to-white shadow-2xl shadow-green-900/10 scale-105 z-10' : 'bg-white'}`}>
-                <div className="overflow-hidden relative flex-shrink-0 bg-black">
-                  <video src={prod.media} autoPlay loop muted playsInline controls className="w-full h-auto block opacity-90 hover:opacity-100 transition-opacity" />
+              <motion.div key={index} whileHover={{ y: -5 }} className={`rounded-2xl overflow-hidden border border-[#27663a] flex flex-col h-full mx-auto w-full max-w-sm shadow-xl p-8 ${index === 1 ? 'bg-[#184526] scale-105 z-10 shadow-green-900/30 ring-4 ring-green-600/20' : 'bg-[#1d542e]'}`}>
+                <div className="relative flex-shrink-0 flex justify-center mb-8">
+                  <div className="w-40 h-40 bg-white rounded-2xl p-3 shadow-inner flex items-center justify-center">
+                    <img src="/images/fertilizer_bag.png" alt="Saca de Fertilizante NPK" className="w-full h-full object-contain" />
+                  </div>
                   {index === 1 && (
-                    <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full text-xs text-gray-900 font-medium flex items-center gap-1 border border-gray-200">
-                      <i className="bi bi-star-fill text-green-700"></i> Mais Pedido
+                    <div className="absolute -top-4 right-0 bg-nt-gold px-4 py-1 rounded-full text-xs text-gray-900 font-bold flex items-center gap-1 shadow-md">
+                      <i className="bi bi-star-fill text-gray-900"></i> Mais Pedido
                     </div>
                   )}
                 </div>
-                <div className="p-6 flex flex-col flex-grow relative">
-                  <h3 className="text-2xl font-serif text-gray-900 mb-2">{prod.name}</h3>
-                  <p className="text-gray-600 text-sm mb-8 flex-grow font-light">{prod.desc}</p>
+                <div className="flex flex-col flex-grow text-center relative z-10">
+                  <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-wide">{prod.name}</h3>
+                  <p className="text-white/90 text-sm mb-8 flex-grow font-medium leading-relaxed px-2">{prod.desc}</p>
                   
                   <div className="mt-auto">
-                    <a href={`${WHATSAPP_LINK}?text=Olá, gostaria de solicitar uma cotação para o produto: ${prod.name}`} target="_blank" rel="noreferrer" className={`block w-full text-center text-sm font-semibold py-3 rounded-xl transition-all border ${index === 1 ? 'bg-green-700 text-white border-green-700 hover:bg-green-800' : 'bg-green-50 hover:bg-green-700 text-green-700 hover:text-white border-gray-200'}`}>
+                    <a href={`${WHATSAPP_LINK}?text=Olá, gostaria de solicitar uma cotação para o produto: ${prod.name}`} target="_blank" rel="noreferrer" className={`inline-block w-full text-center text-sm font-bold py-3.5 px-6 rounded-lg transition-all ${index === 1 ? 'bg-white text-green-900 hover:bg-gray-100' : 'bg-[#143d21] hover:bg-[#10301a] text-white border border-[#2b7842]'}`}>
                       Solicitar Cotação
                     </a>
                   </div>
