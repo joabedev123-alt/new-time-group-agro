@@ -94,7 +94,9 @@ export default function LandingPage() {
             </motion.h1>
             
             <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light mx-auto md:mx-0">
-              Revenda especializada de fertilizantes NPK, Ureia, KCL, Super Simples e Triplo. Garantimos a logística eficiente e a mistura exata que o seu solo exige.
+              <strong className="font-medium text-white">Onde o Campo Encontra sua Melhor Performance.</strong><br />
+              Fertilizantes sólidos formulados para quem não aceita menos que a excelência.<br /><br />
+              Qualidade em granel ou big bag, direto para o coração da sua lavoura.
             </motion.p>
             
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
