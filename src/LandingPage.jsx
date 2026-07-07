@@ -98,9 +98,6 @@ export default function LandingPage() {
             </motion.p>
             
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a href="#produtos" className="bg-nt-gold hover:bg-yellow-500 text-[#060a08] px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg text-center flex items-center justify-center gap-2">
-                Ver Portfólio <i className="bi bi-arrow-right"></i>
-              </a>
               <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-all text-center flex items-center justify-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white"><i className="bi bi-whatsapp text-sm"></i></div> Fale Conosco
               </a>
