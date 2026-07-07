@@ -53,12 +53,6 @@ export default function LandingPage() {
             <a href="#contato" className="text-sm font-medium text-white hover:text-nt-gold transition-colors">Contato</a>
           </nav>
 
-          <div className="hidden lg:block">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="bg-nt-gold hover:bg-yellow-500 text-[#060a08] px-6 py-2.5 rounded-full font-bold transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
-              <i className="bi bi-whatsapp"></i> Fale no WhatsApp
-            </a>
-          </div>
-
           {/* Mobile Menu Toggle */}
           <button className="lg:hidden text-2xl text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <i className={`bi ${mobileMenuOpen ? 'bi-x-lg' : 'bi-list'}`}></i>
