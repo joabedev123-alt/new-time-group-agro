@@ -209,15 +209,12 @@ export default function LandingPage() {
               { name: "04 30 10", media: "/images/06.mp4", desc: "Sacaria 50kg" },
               { name: "KCL", media: "/images/07.mp4", desc: "Fosfato fonte de Fósforo, Cálcio e Enxofre." },
               { name: "SSP 18%", media: "/images/11.mp4", desc: "Alta concentração de Fósforo (P2O5)." },
-              { name: "NPK Avariado", media: "/images/29.mp4", desc: "Excelente custo-benefício, mantendo os níveis nutricionais." },
-              { name: "Cloreto de Potássio", media: "/images/33.mp4", desc: "Principal fonte de potássio na agricultura." },
               { name: "NPK 20 15 20", media: "/images/37.mp4", desc: "Alta concentração de fósforo para arranque inicial." },
-              { name: "Sulfato de Amônio", media: "/images/31.mp4", desc: "Fornecimento eficiente de nitrogênio e enxofre." },
             ].map((prod, index) => (
-              <motion.div key={index} whileHover={{ y: -10 }} className={`rounded-3xl overflow-hidden border border-[#1a3022] flex flex-col h-full mx-auto w-full max-w-sm ${index === 4 ? 'bg-gradient-to-b from-[#112317] to-[#0a110d] shadow-2xl shadow-[#112317]/20 scale-105 z-10' : 'bg-[#0c1611]'}`}>
+              <motion.div key={index} whileHover={{ y: -10 }} className={`rounded-3xl overflow-hidden border border-[#1a3022] flex flex-col h-full mx-auto w-full max-w-sm ${index === 1 ? 'bg-gradient-to-b from-[#112317] to-[#0a110d] shadow-2xl shadow-[#112317]/20 scale-105 z-10' : 'bg-[#0c1611]'}`}>
                 <div className="overflow-hidden relative flex-shrink-0 bg-black">
                   <video src={prod.media} autoPlay loop muted playsInline controls className="w-full h-auto block opacity-90 hover:opacity-100 transition-opacity" />
-                  {index === 4 && (
+                  {index === 1 && (
                     <div className="absolute top-4 left-4 bg-[#060a08]/80 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white font-medium flex items-center gap-1 border border-white/10">
                       <i className="bi bi-star-fill text-nt-gold"></i> Mais Pedido
                     </div>
@@ -228,7 +225,7 @@ export default function LandingPage() {
                   <p className="text-gray-400 text-sm mb-8 flex-grow font-light">{prod.desc}</p>
                   
                   <div className="mt-auto">
-                    <a href={`${WHATSAPP_LINK}?text=Olá, gostaria de solicitar uma cotação para o produto: ${prod.name}`} target="_blank" rel="noreferrer" className={`block w-full text-center text-sm font-semibold py-3 rounded-xl transition-all border ${index === 4 ? 'bg-nt-gold text-[#060a08] border-nt-gold hover:bg-yellow-500' : 'bg-[#16291e] hover:bg-nt-gold text-nt-gold hover:text-[#060a08] border-[#213f2d]'}`}>
+                    <a href={`${WHATSAPP_LINK}?text=Olá, gostaria de solicitar uma cotação para o produto: ${prod.name}`} target="_blank" rel="noreferrer" className={`block w-full text-center text-sm font-semibold py-3 rounded-xl transition-all border ${index === 1 ? 'bg-nt-gold text-[#060a08] border-nt-gold hover:bg-yellow-500' : 'bg-[#16291e] hover:bg-nt-gold text-nt-gold hover:text-[#060a08] border-[#213f2d]'}`}>
                       Solicitar Cotação
                     </a>
                   </div>
