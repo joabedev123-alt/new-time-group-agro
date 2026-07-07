@@ -205,7 +205,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               { name: "MAP 11 52 00", media: "/images/03.mp4", desc: "Fórmulas ideais para o plantio, ricas em fósforo." },
-              { name: "NPK Cobertura", media: "/images/05.mp4", desc: "Aplicações em cobertura, com alto teor de nitrogênio." },
+              { name: "NPK 20 05 20", media: "/images/05.mp4", desc: "Aplicações em cobertura, com alto teor de nitrogênio." },
               { name: "Ureia Agrícola", media: "/images/06.mp4", desc: "Sólido granulado com 46% de nitrogênio." },
               { name: "Super Simples", media: "/images/07.mp4", desc: "Fosfato fonte de Fósforo, Cálcio e Enxofre." },
               { name: "Super Triplo", media: "/images/11.mp4", desc: "Alta concentração de Fósforo (P2O5)." },
