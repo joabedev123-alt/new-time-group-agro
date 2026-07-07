@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '5548988324762';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const carouselImages = [
-  { src: "/images/17.jpeg", alt: "Operação Agrícola" },
+  { src: "/images/14.jpeg", alt: "Operação Agrícola" },
   { src: "/images/18.jpeg", alt: "Fertilizantes" },
   { src: "/images/19.jpeg", alt: "Lavoura Produtiva" }
 ];
@@ -134,11 +134,11 @@ export default function LandingPage() {
             
             {/* Carousel (Left Side) */}
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative flex justify-center lg:justify-start w-full">
-              <div className="relative rounded-3xl overflow-hidden border border-[#16291e] w-full max-w-[320px] mx-auto lg:mx-0 shadow-2xl">
-                <div className="w-full flex transition-transform duration-700 ease-in-out items-center" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+              <div className="relative rounded-3xl overflow-hidden border border-[#16291e] w-full max-w-[320px] mx-auto lg:mx-0 shadow-2xl aspect-[4/5]">
+                <div className="w-full h-full flex transition-transform duration-700 ease-in-out items-center" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                   {carouselImages.map((img, idx) => (
-                    <div key={idx} className="w-full flex-shrink-0 relative">
-                      <img src={img.src} alt={img.alt} className="w-full h-auto object-cover block opacity-90" />
+                    <div key={idx} className="w-full h-full flex-shrink-0 relative">
+                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover block opacity-90" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#060a08]/90 via-[#060a08]/20 to-transparent"></div>
                       <div className="absolute bottom-12 left-0 w-full text-center px-4">
                         <span className="text-white font-bold text-sm tracking-wider drop-shadow-md">{img.alt}</span>
