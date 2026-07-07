@@ -351,50 +351,50 @@ export default function LandingPage() {
               <div className="mb-6">
                 <img src="/logo.png" alt="New Time Group Logo" className="h-28 w-auto opacity-90 drop-shadow-lg" />
               </div>
-              <p className="text-gray-500 max-w-sm mb-6 leading-relaxed font-light">
+              <p className="text-white/80 max-w-sm mb-6 leading-relaxed font-light">
                 Revenda especializada de fertilizantes e insumos agrícolas. Foco em qualidade, logística rápida e melhores resultados para o agronegócio brasileiro.
               </p>
               <div className="flex gap-4">
-                <a href="https://instagram.com/newtimegroup.oficial" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-green-700 hover:text-white transition-colors border border-gray-200">
+                <a href="https://instagram.com/newtimegroup.oficial" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-green-700 hover:text-white transition-colors border border-white/20">
                   <i className="bi bi-instagram"></i>
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 className="text-gray-900 font-medium mb-6 uppercase tracking-wider text-sm">Links Rápidos</h4>
+              <h4 className="text-white font-medium mb-6 uppercase tracking-wider text-sm">Links Rápidos</h4>
               <ul className="space-y-3">
-                <li><a href="#inicio" className="text-gray-500 hover:text-green-700 transition-colors text-sm">Início</a></li>
-                <li><a href="#sobre" className="text-gray-500 hover:text-green-700 transition-colors text-sm">O que fazemos</a></li>
-                <li><a href="#produtos" className="text-gray-500 hover:text-green-700 transition-colors text-sm">Produtos</a></li>
-                <li><a href="#contato" className="text-gray-500 hover:text-green-700 transition-colors text-sm">Contato</a></li>
+                <li><a href="#inicio" className="text-white/80 hover:text-green-500 transition-colors text-sm">Início</a></li>
+                <li><a href="#sobre" className="text-white/80 hover:text-green-500 transition-colors text-sm">O que fazemos</a></li>
+                <li><a href="#produtos" className="text-white/80 hover:text-green-500 transition-colors text-sm">Produtos</a></li>
+                <li><a href="#contato" className="text-white/80 hover:text-green-500 transition-colors text-sm">Contato</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-gray-900 font-medium mb-6 uppercase tracking-wider text-sm">Contato</h4>
+              <h4 className="text-white font-medium mb-6 uppercase tracking-wider text-sm">Contato</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-500 text-sm">
-                  <i className="bi bi-whatsapp text-green-700 mt-0.5"></i>
+                <li className="flex items-start gap-3 text-white/80 text-sm">
+                  <i className="bi bi-whatsapp text-green-500 mt-0.5"></i>
                   <span>(48) 98832-4762</span>
                 </li>
-                <li className="flex items-start gap-3 text-gray-500 text-sm">
-                  <i className="bi bi-instagram text-green-700 mt-0.5"></i>
+                <li className="flex items-start gap-3 text-white/80 text-sm">
+                  <i className="bi bi-instagram text-green-500 mt-0.5"></i>
                   <span>@newtimegroup.oficial</span>
                 </li>
-                <li className="flex items-start gap-3 text-gray-500 text-sm">
-                  <i className="bi bi-geo-alt text-green-700 mt-0.5"></i>
+                <li className="flex items-start gap-3 text-white/80 text-sm">
+                  <i className="bi bi-geo-alt text-green-500 mt-0.5"></i>
                   <span>Atendimento nacional</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="pt-8 pb-24 md:pb-0 md:pr-28 border-t border-[#112317] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-light">
+          <div className="pt-8 pb-24 md:pb-0 md:pr-28 border-t border-[#112317] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/70 font-light">
             <p>&copy; {new Date().getFullYear()} New Time Group Agro & Logística. Todos os direitos reservados.</p>
             <p className="flex items-center text-sm">
               Produzida com <span className="inline-block animate-pulse mx-1 drop-shadow-[0_0_8px_rgba(37,211,102,0.8)]">💚</span> por 
-              <a href="https://camaly.com.br/" target="_blank" rel="noreferrer" className="font-bold ml-1 text-gray-600 hover:text-green-700 transition-colors">
+              <a href="https://camaly.com.br/" target="_blank" rel="noreferrer" className="font-bold ml-1 text-white hover:text-green-500 transition-colors">
                 CAMALY
               </a>
             </p>
