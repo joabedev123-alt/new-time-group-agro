@@ -207,30 +207,59 @@ export default function LandingPage() {
         ))}
       </div>
 
-      {/* 5. O QUE FAZEMOS */}
-      <section id="sobre" className="py-24">
+      {/* 5. O QUE OFERECEMOS (Categorias) */}
+      <section id="categorias" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16 px-2">
-            <h2 className="text-3xl md:text-5xl font-serif text-gray-900 mb-4">Serviços que Oferecemos</h2>
-            <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto font-light">Especialistas em nutrir o seu solo. Conheça as nossas categorias.</p>
+          <div className="text-center mb-16">
+            <h4 className="text-gray-500 uppercase tracking-widest text-sm mb-4 font-medium">O Que Oferecemos</h4>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">Nossos Produtos</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {[
-              { icon: 'bi-box-seam', title: "Mistura NPK", desc: "Fórmulas equilibradas e sob medida para o seu solo." },
-              { icon: 'bi-droplet', title: "Ureia", desc: "Alto teor de nitrogênio para rápida absorção." },
-              { icon: 'bi-recycle', title: "Avariados", desc: "Nutrição excelente com custo-benefício atrativo." },
-              { icon: 'bi-truck', title: "Logística", desc: "Entrega ágil e segura em todo o território nacional." }
-            ].map((serv, i) => (
-              <motion.div key={i} whileHover={{ scale: 1.05 }} className="bg-gradient-to-br from-[#112317] to-[#0c1611] p-8 rounded-3xl border border-gray-200 text-center group shadow-xl">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-white border border-gray-200 flex items-center justify-center text-green-700 text-2xl mb-6 group-hover:bg-green-700 group-hover:text-white transition-colors">
-                  <i className={`bi ${serv.icon}`}></i>
-                </div>
-                <h3 className="text-gray-900 font-serif text-xl mb-3">{serv.title}</h3>
-                <p className="text-gray-600 text-sm font-light leading-relaxed">{serv.desc}</p>
-                <a href="#contato" className="inline-block mt-4 text-xs font-bold text-green-700 tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">Saiba Mais &rarr;</a>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+            
+            {/* Card 1 */}
+            <motion.div whileHover={{ y: -5 }} className="bg-[#1f5930] rounded-xl p-8 flex flex-col items-center text-center shadow-lg border border-[#27663a]">
+              <div className="w-32 h-32 mb-6">
+                <img src="/images/fertilizer_bag.png" alt="Saca de Matéria Prima" className="w-full h-full object-contain mix-blend-screen" />
+              </div>
+              <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-6">Matéria Prima</h3>
+              <p className="text-white/90 text-sm leading-relaxed font-medium">
+                MAP 11.52 - Uréia 46% - TSP 45%<br/>
+                SSP 18% - SSP 21% - SAM 21% - NP 10.46<br/>
+                DAP 17.45 - KCL 60%
+              </p>
+            </motion.div>
+
+            {/* Card 2 */}
+            <motion.div whileHover={{ y: -5 }} className="bg-[#1f5930] rounded-xl p-8 flex flex-col items-center text-center shadow-lg border border-[#27663a]">
+              <div className="w-32 h-32 mb-6">
+                <img src="/images/fertilizer_bag.png" alt="Saca de NPK Misturado" className="w-full h-full object-contain mix-blend-screen" />
+              </div>
+              <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-6">NPK Misturado</h3>
+              <p className="text-white/90 text-sm leading-relaxed font-medium">
+                04.14.08 - 04.30.10 - 02.20.20 - 04.20.20<br/>
+                03.21.21 - 20.00.20 - 30.00.20 - 20.05.20<br/>
+                19.04.19 - 32.00.16 - 20.00.30 - 16.04.19
+              </p>
+            </motion.div>
+
+            {/* Card 3 */}
+            <motion.div whileHover={{ y: -5 }} className="bg-[#1f5930] rounded-xl p-8 flex flex-col items-center text-center shadow-lg border border-[#27663a]">
+              <div className="w-32 h-32 mb-6">
+                <img src="/images/fertilizer_bag.png" alt="Saca de NPK Personalizado" className="w-full h-full object-contain mix-blend-screen" />
+              </div>
+              <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-6">NPK Personalizado</h3>
+              <p className="text-white/90 text-sm leading-relaxed font-medium mt-2">
+                Oferecemos uma infinidade de formulações de NPK podendo personalizar conforme sua necessidade!
+              </p>
+            </motion.div>
+
+          </div>
+
+          <div className="text-center">
+            <a href="#contato" className="inline-block bg-[#1f5930] hover:bg-[#164423] text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-md border border-[#27663a]">
+              Ver mais!
+            </a>
           </div>
         </div>
       </section>
