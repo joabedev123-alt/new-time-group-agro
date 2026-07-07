@@ -41,7 +41,7 @@ export default function LandingPage() {
       <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100 bg-transparent py-5'}`}>
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/logo.png" alt="New Time Group Logo" className="h-12 w-auto scale-[2] origin-left drop-shadow-sm" />
+            <img src="/logo.png" alt="New Time Group Logo" className="h-12 w-auto scale-[2.5] origin-left drop-shadow-sm" />
           </div>
 
           {/* Desktop Menu */}
