@@ -88,16 +88,16 @@ export default function LandingPage() {
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">
-              A base forte para a sua <span className="text-nt-gold italic">lavoura.</span>
+          <div className="max-w-3xl text-center md:text-left">
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
+              A base forte para a sua <br className="md:hidden" /><span className="text-nt-gold italic">lavoura.</span>
             </motion.h1>
             
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-xl text-gray-300 mb-10 max-w-2xl font-light">
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light mx-auto md:mx-0">
               Revenda especializada de fertilizantes NPK, Ureia, KCL, Super Simples e Triplo. Garantimos a logística eficiente e a mistura exata que o seu solo exige.
             </motion.p>
             
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a href="#produtos" className="bg-nt-gold hover:bg-yellow-500 text-[#060a08] px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg text-center flex items-center justify-center gap-2">
                 Ver Portfólio <i className="bi bi-arrow-right"></i>
               </a>
@@ -121,7 +121,7 @@ export default function LandingPage() {
               <p className="text-white text-sm mt-1">Produtores Nacionais</p>
             </div>
           </div>
-          <p className="text-gray-400 text-sm md:text-base max-w-lg italic border-l border-[#1d3527] pl-6">
+          <p className="text-gray-400 text-sm md:text-base max-w-lg italic border-t md:border-t-0 md:border-l border-[#1d3527] pt-6 md:pt-0 pl-0 md:pl-6 text-center md:text-left">
             "A New Time Group transformou nossa operação. Entrega no prazo e fertilizantes com qualidade impecável."
           </p>
         </motion.div>
@@ -162,13 +162,13 @@ export default function LandingPage() {
             </motion.div>
 
             {/* Text Content (Right Side) */}
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Onde a Produtividade<br/>Encontra o Campo.</h2>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed font-light">
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-center md:text-left">
+              <h2 className="text-3xl md:text-5xl font-serif text-white mb-6 leading-tight">Onde a Produtividade<br className="hidden md:block"/> Encontra o Campo.</h2>
+              <p className="text-gray-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 Com atuação nacional, nós garantimos não apenas a entrega do insumo, mas a qualidade e a segurança que a sua safra precisa. Processo sem burocracia, do orçamento ao fechamento.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-left">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#112317] flex items-center justify-center text-nt-gold flex-shrink-0"><i className="bi bi-truck text-xl"></i></div>
                   <div>
@@ -197,9 +197,9 @@ export default function LandingPage() {
       {/* 4. PRODUTOS */}
       <section id="produtos" className="py-24 bg-[#0a110d] border-y border-[#16291e]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Nosso Portfólio de Produtos</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto font-light">A mistura exata que a análise do seu solo exige. Insumos de alta performance para o produtor exigente.</p>
+          <div className="text-center mb-16 px-2">
+            <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">Nosso Portfólio de Produtos</h2>
+            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light">A mistura exata que a análise do seu solo exige. Insumos de alta performance para o produtor exigente.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -251,9 +251,9 @@ export default function LandingPage() {
       {/* 5. O QUE FAZEMOS */}
       <section id="sobre" className="py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Serviços que Oferecemos</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto font-light">Especialistas em nutrir o seu solo. Conheça as nossas categorias.</p>
+          <div className="text-center mb-16 px-2">
+            <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">Serviços que Oferecemos</h2>
+            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light">Especialistas em nutrir o seu solo. Conheça as nossas categorias.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -279,12 +279,12 @@ export default function LandingPage() {
       {/* Stats Section */}
       <section className="py-16 border-y border-[#16291e] bg-[#0a110d]">
         <div className="container mx-auto px-4 md:px-6 flex flex-col lg:flex-row justify-between items-center gap-10">
-          <h2 className="text-3xl md:text-4xl font-serif text-white max-w-md text-center lg:text-left">
-            Conquistamos o melhor da <span className="text-nt-gold italic">Agricultura</span>
+          <h2 className="text-2xl md:text-4xl font-serif text-white max-w-md text-center lg:text-left leading-tight">
+            Conquistamos o melhor da <br className="hidden md:block"/><span className="text-nt-gold italic">Agricultura</span>
           </h2>
-          <div className="flex flex-wrap justify-center lg:justify-end gap-10 md:gap-16">
+          <div className="flex flex-wrap justify-center lg:justify-end gap-8 md:gap-16">
             <div className="text-center">
-              <h3 className="text-4xl font-serif text-nt-gold mb-1">500+</h3>
+              <h3 className="text-3xl md:text-4xl font-serif text-nt-gold mb-1">500+</h3>
               <p className="text-xs text-gray-400 uppercase tracking-widest">Produtores</p>
             </div>
             <div className="text-center">
@@ -309,12 +309,12 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
               {/* Contato Left */}
-              <div>
-                <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Pronto para fechar negócio?</h2>
-                <div className="mb-8 rounded-3xl overflow-hidden border border-[#1a3022] w-full max-w-[320px]">
-                  <img src="/images/10.jpeg" alt="Atendimento New Time Group" className="w-full h-auto object-cover block opacity-80" />
+              <div className="text-center md:text-left">
+                <h2 className="text-3xl md:text-5xl font-serif text-white mb-6">Pronto para fechar negócio?</h2>
+                <div className="mb-8 rounded-3xl overflow-hidden border border-[#1a3022] w-full max-w-[320px] mx-auto md:mx-0 shadow-xl">
+                  <img src="/images/10.jpeg" alt="Atendimento New Time Group" className="w-full h-auto object-cover block opacity-90" />
                 </div>
-                <p className="text-gray-400 text-lg mb-10 font-light max-w-md">
+                <p className="text-gray-400 text-base md:text-lg mb-10 font-light max-w-md mx-auto md:mx-0">
                   Nossa equipe responderá em poucos minutos com as melhores cotações do mercado.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
