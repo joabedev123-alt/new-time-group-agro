@@ -105,72 +105,50 @@ export default function LandingPage() {
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* 3. POR QUE NOS ESCOLHER */}
-      <section id="processo" className="py-24 overflow-hidden">
+           {/* 3. INSTITUCIONAL (SOBRE) */}
+      <section id="sobre" className="py-24 bg-white overflow-hidden border-t border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            {/* Carousel (Left Side) */}
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative flex justify-center lg:justify-start w-full">
-              <div className="relative rounded-3xl overflow-hidden border border-gray-200 w-full max-w-[320px] mx-auto lg:mx-0 shadow-2xl aspect-[4/5]">
-                <div className="w-full h-full flex transition-transform duration-700 ease-in-out items-center" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-                  {carouselImages.map((img, idx) => (
-                    <div key={idx} className="w-full h-full flex-shrink-0 relative">
-                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover block opacity-90" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#060a08]/90 via-[#060a08]/20 to-transparent"></div>
-                      <div className="absolute bottom-12 left-0 w-full text-center px-4">
-                        <span className="text-gray-900 font-bold text-sm tracking-wider drop-shadow-md">{img.alt}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                {/* Navigation dots */}
-                <div className="absolute bottom-4 right-0 w-full flex justify-center gap-2">
-                  {carouselImages.map((_, idx) => (
-                    <button key={idx} onClick={() => setCurrentSlide(idx)} className={`w-2.5 h-2.5 rounded-full transition-colors shadow-sm ${currentSlide === idx ? 'bg-green-700 scale-125' : 'bg-white/50 hover:bg-white'}`} />
-                  ))}
-                </div>
-              </div>
-
-              {/* Floating Stat Badge */}
-              <div className="absolute -bottom-6 right-0 lg:-right-6 bg-[#0f1f14] border border-[#1a3322] p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center min-w-[140px] z-10 backdrop-blur-md">
-                <span className="text-4xl font-serif text-green-700 mb-1">10+</span>
-                <span className="text-gray-900 text-xs text-center font-medium uppercase tracking-wider">Anos de<br/>Experiência</span>
-              </div>
-            </motion.div>
-
-            {/* Text Content (Right Side) */}
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-serif text-gray-900 mb-6 leading-tight">Onde a Produtividade<br className="hidden md:block"/> Encontra o Campo.</h2>
-              <p className="text-gray-600 text-base md:text-lg mb-8 leading-relaxed font-light">
-                Com atuação nacional, nós garantimos não apenas a entrega do insumo, mas a qualidade e a segurança que a sua safra precisa. Processo sem burocracia, do orçamento ao fechamento.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-left">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-green-700 flex-shrink-0"><i className="bi bi-truck text-xl"></i></div>
-                  <div>
-                    <h4 className="text-gray-900 font-medium mb-1">Atendimento Nacional</h4>
-                    <p className="text-sm text-gray-500">Logística eficiente para todo o Brasil.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-green-700 flex-shrink-0"><i className="bi bi-cash-coin text-xl"></i></div>
-                  <div>
-                    <h4 className="text-gray-900 font-medium mb-1">Custo-Benefício</h4>
-                    <p className="text-sm text-gray-500">Preços competitivos para seu orçamento.</p>
-                  </div>
-                </div>
-              </div>
-
-              <a href="#contato" className="inline-block bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg">
-                Saiba Mais
-              </a>
-            </motion.div>
-
+          <div className="text-center mb-16">
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-serif text-gray-900 mb-6">
+              Como a New Time Group impacta o agronegócio
+            </motion.h2>
+            <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed font-light">
+              Acreditamos que uma agricultura forte começa com uma nutrição eficiente do solo. Trabalhamos para entregar fertilizantes de alta qualidade, soluções personalizadas e logística ágil, contribuindo para que produtores rurais de todo o Brasil alcancem mais produtividade, rentabilidade e sustentabilidade em suas lavouras.
+            </motion.p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-gray-50 border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-serif text-gray-900 mb-4 flex items-center gap-3"><i className="bi bi-bullseye text-green-700"></i> Missão</h3>
+              <p className="text-gray-600 leading-relaxed">Fornecer fertilizantes e insumos agrícolas de alta qualidade, oferecendo soluções técnicas, atendimento especializado e logística eficiente para impulsionar a produtividade das lavouras e gerar resultados consistentes para o produtor rural em todo o Brasil.</p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-gray-50 border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-serif text-gray-900 mb-4 flex items-center gap-3"><i className="bi bi-eye text-green-700"></i> Visão</h3>
+              <p className="text-gray-600 leading-relaxed">Ser reconhecida como uma das principais referências nacionais na comercialização e distribuição de fertilizantes, destacando-se pela qualidade dos produtos, excelência no atendimento, inovação, agilidade logística e compromisso com o desenvolvimento do agronegócio brasileiro.</p>
+            </motion.div>
+          </div>
+
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h3 className="text-3xl font-serif text-gray-900 mb-10 text-center">Nossos Valores</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: "bi-shield-check", title: "Compromisso com o Produtor", desc: "Construímos relações duradouras baseadas na confiança, no respeito e na entrega de resultados reais para nossos clientes." },
+                { icon: "bi-graph-up-arrow", title: "Qualidade e Eficiência", desc: "Trabalhamos com fertilizantes selecionados e soluções que proporcionam alto desempenho, produtividade e melhor aproveitamento nutricional." },
+                { icon: "bi-handshake", title: "Ética e Transparência", desc: "Atuamos com responsabilidade, honestidade e transparência em todas as negociações e parcerias." },
+                { icon: "bi-truck", title: "Agilidade Logística", desc: "Garantimos processos eficientes e entregas rápidas para atender produtores em todo o território nacional." },
+                { icon: "bi-lightbulb", title: "Inovação para o Campo", desc: "Buscamos constantemente novas tecnologias, produtos e soluções que contribuam para uma agricultura mais produtiva, moderna e sustentável." },
+                { icon: "bi-cash-coin", title: "Foco em Resultados", desc: "Nosso compromisso é entregar valor ao produtor rural, ajudando a maximizar a produtividade, reduzir custos e aumentar a rentabilidade da lavoura." },
+              ].map((val, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-700 text-xl mb-4">
+                    <i className={`bi ${val.icon}`}></i>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{val.title}</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">{val.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
