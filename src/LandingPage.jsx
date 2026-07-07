@@ -131,23 +131,23 @@ export default function LandingPage() {
           </div>
 
           {/* Estatísticas - Faixa Verde */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-[#1f5930] rounded-3xl py-12 px-4 md:px-6 mb-20 shadow-xl w-full border border-[#27663a]">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-2 text-center md:divide-x divide-green-500/30">
-              <div className="px-2 border-r border-green-500/30 md:border-none">
-                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">640<span className="text-nt-gold">+</span></h3>
-                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Clientes<br/>Satisfeitos</p>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-[#1f5930] rounded-3xl py-10 md:py-12 px-2 md:px-6 mb-20 shadow-xl w-full border border-[#27663a]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-8 gap-x-2 text-center md:divide-x divide-green-500/30">
+              <div className="px-1 md:px-2 border-r border-green-500/30 md:border-none">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-1 md:mb-2">640<span className="text-nt-gold">+</span></h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Clientes<br/>Satisfeitos</p>
               </div>
-              <div className="px-2">
-                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">33<span className="text-nt-gold">%</span></h3>
-                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Crescimento<br/>Ano a Ano</p>
+              <div className="px-1 md:px-2">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-1 md:mb-2">33<span className="text-nt-gold">%</span></h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Crescimento<br/>Ano a Ano</p>
               </div>
-              <div className="px-2 border-r border-green-500/30 md:border-l md:border-none">
-                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">5</h3>
-                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Anos de<br/>Experiência</p>
+              <div className="px-1 md:px-2 border-r border-green-500/30 md:border-l md:border-none">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-1 md:mb-2">5</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Anos de<br/>Experiência</p>
               </div>
-              <div className="px-2">
-                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">17<span className="text-nt-gold">k</span></h3>
-                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Toneladas<br/>Entregues/Ano</p>
+              <div className="px-1 md:px-2">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-1 md:mb-2">17<span className="text-nt-gold">k</span></h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Toneladas<br/>Entregues</p>
               </div>
             </div>
           </motion.div>
@@ -293,12 +293,12 @@ export default function LandingPage() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="bg-white border border-gray-200 rounded-[3rem] p-8 md:p-16 shadow-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
               
               {/* Contato Left */}
               <div className="text-center md:text-left flex flex-col justify-center">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Pronto para fechar negócio?</h2>
-                <p className="text-gray-800 text-lg md:text-xl mb-10 font-medium max-w-md mx-auto md:mx-0 leading-relaxed">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">Pronto para fechar negócio?</h2>
+                <p className="text-gray-800 text-base md:text-xl mb-8 md:mb-10 font-medium max-w-md mx-auto md:mx-0 leading-relaxed">
                   Nossa equipe responderá em poucos minutos com as melhores cotações do mercado.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
