@@ -105,7 +105,9 @@ export default function LandingPage() {
             </motion.div>
           </div>
         </div>
-           {/* 3. INSTITUCIONAL (SOBRE) */}
+      </section>
+
+      {/* 3. INSTITUCIONAL (SOBRE) */}
       <section id="sobre" className="py-24 bg-white overflow-hidden border-t border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
