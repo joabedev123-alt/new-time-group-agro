@@ -110,24 +110,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Floating Testimonial Banner */}
-      <div className="relative z-20 -mt-16 container mx-auto px-4 md:px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-[#112317] border border-[#1d3527] rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-4">
-            <div className="flex -space-x-3">
-              {[1,2,3].map(i => <div key={i} className="w-12 h-12 rounded-full border-2 border-[#112317] bg-gray-600 overflow-hidden"><img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" /></div>)}
-            </div>
-            <div>
-              <div className="flex text-nt-gold text-sm"><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i></div>
-              <p className="text-white text-sm mt-1">Produtores Nacionais</p>
-            </div>
-          </div>
-          <p className="text-gray-400 text-sm md:text-base max-w-lg italic border-t md:border-t-0 md:border-l border-[#1d3527] pt-6 md:pt-0 pl-0 md:pl-6 text-center md:text-left">
-            "A New Time Group transformou nossa operação. Entrega no prazo e fertilizantes com qualidade impecável."
-          </p>
-        </motion.div>
-      </div>
-
       {/* 3. POR QUE NOS ESCOLHER */}
       <section id="processo" className="py-24 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
