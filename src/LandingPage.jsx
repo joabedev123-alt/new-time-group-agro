@@ -318,18 +318,18 @@ export default function LandingPage() {
                     { q: "Qual o pedido mínimo?", a: "Entre em contato via WhatsApp para avaliarmos a sua demanda e passarmos as condições." },
                     { q: "Como solicitar uma cotação?", a: "Basta clicar em qualquer botão do WhatsApp no site e nos informar sua necessidade." }
                   ].map((faq, index) => (
-                    <div key={index} className="border border-gray-200 rounded-2xl bg-[#0f1d15] overflow-hidden">
+                    <div key={index} className="border border-[#27663a] rounded-2xl bg-[#1f5930] overflow-hidden">
                       <button 
-                        className="w-full px-6 py-5 text-left flex justify-between items-center text-gray-900 font-medium hover:text-green-700 transition-colors"
+                        className="w-full px-6 py-5 text-left flex justify-between items-center text-white font-bold hover:text-green-300 transition-colors"
                         onClick={() => setOpenFaq(openFaq === index ? null : index)}
                       >
                         {faq.q}
-                        <i className={`bi bi-chevron-down transition-transform text-green-700 ${openFaq === index ? 'rotate-180' : ''}`}></i>
+                        <i className={`bi bi-chevron-down transition-transform text-nt-gold ${openFaq === index ? 'rotate-180' : ''}`}></i>
                       </button>
                       <AnimatePresence>
                         {openFaq === index && (
                           <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }} className="overflow-hidden">
-                            <p className="px-6 pb-5 text-gray-600 text-sm font-light leading-relaxed">{faq.a}</p>
+                            <p className="px-6 pb-5 text-white/90 text-sm font-medium leading-relaxed">{faq.a}</p>
                           </motion.div>
                         )}
                       </AnimatePresence>
