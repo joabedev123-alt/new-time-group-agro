@@ -211,7 +211,7 @@ export default function LandingPage() {
               { name: "SSP 18%", media: "/images/11.mp4", desc: "Alta concentração de Fósforo (P2O5)." },
               { name: "NPK Avariado", media: "/images/29.mp4", desc: "Excelente custo-benefício, mantendo os níveis nutricionais." },
               { name: "Cloreto de Potássio", media: "/images/33.mp4", desc: "Principal fonte de potássio na agricultura." },
-              { name: "Fosfato (MAP)", media: "/images/37.mp4", desc: "Alta concentração de fósforo para arranque inicial." },
+              { name: "NPK 20 15 20", media: "/images/37.mp4", desc: "Alta concentração de fósforo para arranque inicial." },
               { name: "Sulfato de Amônio", media: "/images/31.mp4", desc: "Fornecimento eficiente de nitrogênio e enxofre." },
             ].map((prod, index) => (
               <motion.div key={index} whileHover={{ y: -10 }} className={`rounded-3xl overflow-hidden border border-[#1a3022] flex flex-col h-full mx-auto w-full max-w-sm ${index === 4 ? 'bg-gradient-to-b from-[#112317] to-[#0a110d] shadow-2xl shadow-[#112317]/20 scale-105 z-10' : 'bg-[#0c1611]'}`}>
