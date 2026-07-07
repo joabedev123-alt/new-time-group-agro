@@ -130,6 +130,28 @@ export default function LandingPage() {
             </motion.div>
           </div>
 
+          {/* Estatísticas - Faixa Verde */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-[#1f5930] rounded-3xl py-12 px-4 md:px-6 mb-20 shadow-xl w-full border border-[#27663a]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-2 text-center md:divide-x divide-green-500/30">
+              <div className="px-2 border-r border-green-500/30 md:border-none">
+                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">640<span className="text-nt-gold">+</span></h3>
+                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Clientes<br/>Satisfeitos</p>
+              </div>
+              <div className="px-2">
+                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">33<span className="text-nt-gold">%</span></h3>
+                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Crescimento<br/>Ano a Ano</p>
+              </div>
+              <div className="px-2 border-r border-green-500/30 md:border-l md:border-none">
+                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">5</h3>
+                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Anos de<br/>Experiência</p>
+              </div>
+              <div className="px-2">
+                <h3 className="text-4xl md:text-5xl font-serif text-white mb-2">17<span className="text-nt-gold">k</span></h3>
+                <p className="text-xs md:text-sm text-white/80 uppercase tracking-widest font-medium">Toneladas<br/>Entregues/Ano</p>
+              </div>
+            </div>
+          </motion.div>
+
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h3 className="text-3xl font-serif text-gray-900 mb-10 text-center">Nossos Valores</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -260,29 +282,6 @@ export default function LandingPage() {
             <a href="#contato" className="inline-block bg-[#1f5930] hover:bg-[#164423] text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-md border border-[#27663a]">
               Ver mais!
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 border-y border-gray-200 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6 flex flex-col lg:flex-row justify-between items-center gap-10">
-          <h2 className="text-2xl md:text-4xl font-serif text-gray-900 max-w-md text-center lg:text-left leading-tight">
-            Conquistamos o melhor da <br className="hidden md:block"/><span className="text-green-700 italic">Agricultura</span>
-          </h2>
-          <div className="flex flex-wrap justify-center lg:justify-end gap-8 md:gap-16">
-            <div className="text-center">
-              <h3 className="text-3xl md:text-4xl font-serif text-green-700 mb-1">500+</h3>
-              <p className="text-xs text-gray-600 uppercase tracking-widest">Produtores</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-4xl font-serif text-green-700 mb-1">100%</h3>
-              <p className="text-xs text-gray-600 uppercase tracking-widest">Satisfação</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-4xl font-serif text-green-700 mb-1">20k+</h3>
-              <p className="text-xs text-gray-600 uppercase tracking-widest">Ton. Entregues</p>
-            </div>
           </div>
         </div>
       </section>
