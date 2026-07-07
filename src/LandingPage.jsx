@@ -83,7 +83,7 @@ export default function LandingPage() {
       <section id="inicio" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="/images/heroprincipal.png" alt="Plantação" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+          <img src="/images/heroprincipal.png" alt="Plantação" className="absolute inset-0 w-full h-full object-contain opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#060a08] via-[#060a08]/80 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-[#060a08]/80 via-transparent to-[#060a08]"></div>
         </div>
