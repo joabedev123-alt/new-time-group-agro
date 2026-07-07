@@ -93,8 +93,8 @@ export default function LandingPage() {
               A base forte para a sua <br className="md:hidden" /><span className="text-green-700 italic">lavoura.</span>
             </motion.h1>
             
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl font-light mx-auto md:mx-0">
-              <strong className="text-gray-900 font-medium">Onde o Campo Encontra sua Melhor Performance.</strong><br/>
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg md:text-xl text-gray-900 mb-10 max-w-2xl font-medium mx-auto md:mx-0 bg-white/40 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/60">
+              <strong className="text-gray-900 font-bold block mb-2">Onde o Campo Encontra sua Melhor Performance.</strong>
               Fertilizantes sólidos formulados para quem não aceita menos que a excelência. Qualidade em granel ou big bag, direto para o coração da sua lavoura.
             </motion.p>
             
