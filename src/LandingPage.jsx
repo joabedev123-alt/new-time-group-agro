@@ -50,7 +50,6 @@ export default function LandingPage() {
             <nav className="flex gap-6">
               <a href="#inicio" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-house-door text-black"></i> Início</a>
               <a href="#sobre" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-info-circle text-black"></i> O que fazemos</a>
-              <a href="#processo" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-award text-black"></i> Diferenciais</a>
               <a href="#produtos" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-box-seam text-black"></i> Produtos</a>
               <a href="#contato" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-envelope text-black"></i> Contato</a>
             </nav>
@@ -70,7 +69,6 @@ export default function LandingPage() {
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl py-4 flex flex-col items-center gap-4 border-t border-gray-200">
               <a href="#inicio" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-house-door text-black"></i> Início</a>
               <a href="#sobre" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-info-circle text-black"></i> O que fazemos</a>
-              <a href="#processo" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-award text-black"></i> Diferenciais</a>
               <a href="#produtos" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-box-seam text-black"></i> Produtos</a>
               <a href="#contato" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-envelope text-black"></i> Contato</a>
             </motion.div>
@@ -81,8 +79,9 @@ export default function LandingPage() {
       {/* 2. HERO */}
       <section id="inicio" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[100svh] md:min-h-[90vh] flex items-center">
         {/* Background Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img src="/images/hero.jpeg" alt="Plantação" className="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center opacity-100" />
+        <div className="absolute inset-0 z-0 bg-white">
+          <img src="/images/hero mobile.png" alt="Plantação Mobile" className="absolute inset-x-0 top-24 w-full h-full object-cover opacity-100 block md:hidden" />
+          <img src="/images/hero.jpeg" alt="Plantação" className="absolute inset-0 w-full h-full object-cover object-center opacity-100 hidden md:block" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center mt-16 sm:mt-24 md:mt-56">
