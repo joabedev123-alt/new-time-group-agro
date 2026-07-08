@@ -79,13 +79,13 @@ export default function LandingPage() {
       </header>
 
       {/* 2. HERO */}
-      <section id="inicio" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+      <section id="inicio" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[100svh] md:min-h-[90vh] flex items-center">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="/images/hero.jpeg" alt="Plantação" className="absolute inset-0 w-full h-full object-cover opacity-100" />
+          <img src="/images/hero.jpeg" alt="Plantação" className="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center opacity-100" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center mt-32 md:mt-56">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center mt-16 sm:mt-24 md:mt-56">
           <div className="max-w-4xl text-center mx-auto">
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-2xl sm:text-3xl md:text-5xl font-serif text-gray-900 mb-6 leading-tight">
               A base forte para a sua <span className="text-black italic">lavoura.</span>
