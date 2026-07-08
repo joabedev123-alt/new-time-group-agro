@@ -108,7 +108,7 @@ export default function LandingPage() {
       </section>
 
       {/* 3. INSTITUCIONAL (SOBRE) */}
-      <section id="sobre" className="py-24 bg-white overflow-hidden border-t border-gray-100">
+      <section id="sobre" className="py-16 md:py-24 bg-white overflow-hidden border-t border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-serif text-gray-900 mb-6">
@@ -177,7 +177,7 @@ export default function LandingPage() {
       </section>
 
       {/* 4. PRODUTOS */}
-      <section id="produtos" className="py-24 bg-gray-50 border-y border-gray-200">
+      <section id="produtos" className="py-16 md:py-24 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16 px-2">
             <h2 className="text-3xl md:text-5xl font-serif text-gray-900 mb-4">Nosso Portfólio de Produtos</h2>
@@ -186,20 +186,18 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              { name: "MAP 11 52 00", desc: "Fórmulas ideais para o plantio, ricas em fósforo." },
-              { name: "NPK 20 05 20", desc: "Aplicações em cobertura, com alto teor de nitrogênio." },
-              { name: "04 30 10", desc: "Sacaria 50kg" },
-              { name: "KCL", desc: "Fosfato fonte de Fósforo, Cálcio e Enxofre." },
-              { name: "SSP 18%", desc: "Alta concentração de Fósforo (P2O5)." },
-              { name: "NPK 20 15 20", desc: "Alta concentração de fósforo para arranque inicial." },
+              { name: "MAP 11 52 00", desc: "Fórmulas ideais para o plantio, ricas em fósforo.", img: "/images/11 52 00.jpeg" },
+              { name: "NPK 20 05 20", desc: "Aplicações em cobertura, com alto teor de nitrogênio.", img: "/images/20 05 20.jpeg" },
+              { name: "04 30 10", desc: "Sacaria 50kg", img: "/images/04 30 10.jpeg" },
+              { name: "KCL", desc: "Fosfato fonte de Fósforo, Cálcio e Enxofre.", img: "/images/kcl.jpeg" },
+              { name: "SSP 18% e 21%", desc: "Alta concentração de Fósforo (P2O5).", img: "/images/ssp 18.jpeg" },
+              { name: "04 14 08", desc: "Alta concentração de fósforo para arranque inicial.", img: "/images/04 14 08.jpeg" },
             ].map((prod, index) => (
-              <motion.div key={index} whileHover={{ y: -5 }} className={`rounded-2xl overflow-hidden border border-[#27663a] flex flex-col h-full mx-auto w-full max-w-sm shadow-xl p-8 ${index === 1 ? 'bg-[#184526] scale-105 z-10 shadow-green-900/30 ring-4 ring-green-600/20' : 'bg-[#1d542e]'}`}>
-                <div className="relative flex-shrink-0 flex justify-center mb-8">
-                  <div className="w-40 h-40 bg-white rounded-2xl p-3 shadow-inner flex items-center justify-center">
-                    <img src="/images/fertilizer_bag.png" alt="Saca de Fertilizante NPK" className="w-full h-full object-contain" />
-                  </div>
+              <motion.div key={index} whileHover={{ y: -5 }} className="rounded-2xl overflow-hidden border border-[#27663a] flex flex-col h-full mx-auto w-full max-w-sm shadow-xl p-8 bg-[#1d542e]">
+                <div className="relative flex-shrink-0 flex justify-center mb-8 w-full h-48 rounded-2xl overflow-hidden">
+                  <img src={prod.img || "/images/fertilizer_bag.png"} alt={`Saca de ${prod.name}`} className="w-full h-full rounded-2xl object-contain" />
                   {index === 1 && (
-                    <div className="absolute -top-4 right-0 bg-nt-gold px-4 py-1 rounded-full text-xs text-gray-900 font-bold flex items-center gap-1 shadow-md">
+                    <div className="absolute -top-4 right-0 bg-nt-gold px-4 py-1 rounded-full text-xs text-gray-900 font-bold flex items-center gap-1 shadow-md z-10">
                       <i className="bi bi-star-fill text-gray-900"></i> Mais Pedido
                     </div>
                   )}
@@ -208,8 +206,8 @@ export default function LandingPage() {
                   <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-wide">{prod.name}</h3>
                   <p className="text-white/90 text-sm mb-8 flex-grow font-medium leading-relaxed px-2">{prod.desc}</p>
                   
-                  <div className="mt-auto">
-                    <a href={`${WHATSAPP_LINK}?text=Olá, gostaria de solicitar uma cotação para o produto: ${prod.name}`} target="_blank" rel="noreferrer" className={`inline-block w-full text-center text-sm font-bold py-3.5 px-6 rounded-lg transition-all ${index === 1 ? 'bg-white text-green-900 hover:bg-gray-100' : 'bg-[#143d21] hover:bg-[#10301a] text-white border border-[#2b7842]'}`}>
+                  <div className="mt-auto pt-4">
+                    <a href={`${WHATSAPP_LINK}?text=Olá, gostaria de solicitar uma cotação para o produto: ${prod.name}`} target="_blank" rel="noreferrer" className="inline-block w-full text-center text-sm font-bold py-3.5 px-6 rounded-lg transition-all bg-[#143d21] hover:bg-[#10301a] text-white border border-[#2b7842]">
                       Solicitar Cotação
                     </a>
                   </div>
@@ -230,19 +228,19 @@ export default function LandingPage() {
       </div>
 
       {/* 5. O QUE OFERECEMOS (Categorias) */}
-      <section id="categorias" className="py-24 bg-white">
+      <section id="categorias" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h4 className="text-gray-500 uppercase tracking-widest text-sm mb-4 font-medium">O Que Oferecemos</h4>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">Nossos Produtos</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
             
             {/* Card 1 */}
             <motion.div whileHover={{ y: -5 }} className="bg-[#1f5930] rounded-xl p-8 flex flex-col items-center text-center shadow-lg border border-[#27663a]">
-              <div className="w-32 h-32 mb-6">
-                <img src="/images/fertilizer_bag.png" alt="Saca de Matéria Prima" className="w-full h-full object-contain mix-blend-screen" />
+              <div className="w-full h-48 rounded-xl overflow-hidden mb-6">
+                <img src="/images/Materia prima.jpeg" alt="Saca de Matéria Prima" className="w-full h-full object-contain" />
               </div>
               <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-6">Matéria Prima</h3>
               <p className="text-white/90 text-sm leading-relaxed font-medium">
@@ -252,23 +250,11 @@ export default function LandingPage() {
               </p>
             </motion.div>
 
-            {/* Card 2 */}
-            <motion.div whileHover={{ y: -5 }} className="bg-[#1f5930] rounded-xl p-8 flex flex-col items-center text-center shadow-lg border border-[#27663a]">
-              <div className="w-32 h-32 mb-6">
-                <img src="/images/fertilizer_bag.png" alt="Saca de NPK Misturado" className="w-full h-full object-contain mix-blend-screen" />
-              </div>
-              <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-6">NPK Misturado</h3>
-              <p className="text-white/90 text-sm leading-relaxed font-medium">
-                04.14.08 - 04.30.10 - 02.20.20 - 04.20.20<br/>
-                03.21.21 - 20.00.20 - 30.00.20 - 20.05.20<br/>
-                19.04.19 - 32.00.16 - 20.00.30 - 16.04.19
-              </p>
-            </motion.div>
 
             {/* Card 3 */}
             <motion.div whileHover={{ y: -5 }} className="bg-[#1f5930] rounded-xl p-8 flex flex-col items-center text-center shadow-lg border border-[#27663a]">
-              <div className="w-32 h-32 mb-6">
-                <img src="/images/fertilizer_bag.png" alt="Saca de NPK Personalizado" className="w-full h-full object-contain mix-blend-screen" />
+              <div className="w-full h-48 rounded-xl overflow-hidden mb-6">
+                <img src="/images/personalizados.jpeg" alt="Saca de NPK Personalizado" className="w-full h-full object-contain" />
               </div>
               <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-6">NPK Personalizado</h3>
               <p className="text-white/90 text-sm leading-relaxed font-medium mt-2">
@@ -286,8 +272,31 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* COTAÇÃO DE FRETE / MATERIAL */}
+      <section className="py-16 md:py-24 bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col lg:flex-row">
+            <div className="lg:w-1/2 flex items-center justify-center p-8 lg:p-12 bg-white">
+              <img src="/images/cotação.jpeg" alt="Entrega de Material" className="w-full h-auto max-h-[450px] object-contain rounded-xl" />
+            </div>
+            <div className="lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center">
+              <h3 className="text-sm font-bold text-green-700 uppercase tracking-widest mb-2">Logística Eficiente</h3>
+              <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">Cotação de Entrega de Material</h2>
+              <p className="text-gray-600 mb-8 leading-relaxed text-lg">
+                Garantimos a entrega ágil e segura dos seus fertilizantes. Temos a melhor estrutura logística para levar o material até a sua propriedade com eficiência e o melhor custo-benefício. Solicite agora a cotação do frete para esse produto!
+              </p>
+              <div>
+                <a href={`${WHATSAPP_LINK}?text=Olá, gostaria de fazer uma cotação para entrega de material.`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-[#1f5930] hover:bg-[#164423] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-green-900/20">
+                  <i className="bi bi-truck text-xl"></i> Cotar Entrega Agora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. CONTATO E FAQ */}
-      <section id="contato" className="py-24 relative overflow-hidden">
+      <section id="contato" className="py-16 md:py-24 relative overflow-hidden">
         {/* Decorative blur */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-700/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
