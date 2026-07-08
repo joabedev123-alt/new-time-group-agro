@@ -48,11 +48,11 @@ export default function LandingPage() {
           {/* Desktop Menu (Center) */}
           <div className="hidden lg:flex items-center justify-center">
             <nav className="flex gap-6">
-              <a href="#inicio" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Início</a>
-              <a href="#sobre" className="text-sm font-medium text-gray-900 hover:text-green-700 transition-colors">O que fazemos</a>
-              <a href="#processo" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Diferenciais</a>
-              <a href="#produtos" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Produtos</a>
-              <a href="#contato" className="text-sm font-medium text-gray-900 hover:text-green-700 transition-colors">Contato</a>
+              <a href="#inicio" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-house-door text-black"></i> Início</a>
+              <a href="#sobre" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-info-circle text-black"></i> O que fazemos</a>
+              <a href="#processo" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-award text-black"></i> Diferenciais</a>
+              <a href="#produtos" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-box-seam text-black"></i> Produtos</a>
+              <a href="#contato" className="text-sm font-medium text-black hover:text-green-700 transition-colors flex items-center gap-2 whitespace-nowrap"><i className="bi bi-envelope text-black"></i> Contato</a>
             </nav>
           </div>
 
@@ -68,11 +68,11 @@ export default function LandingPage() {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl py-4 flex flex-col items-center gap-4 border-t border-gray-200">
-              <a href="#inicio" onClick={() => setMobileMenuOpen(false)} className="font-medium text-gray-900 hover:text-green-700">Início</a>
-              <a href="#sobre" onClick={() => setMobileMenuOpen(false)} className="font-medium text-gray-900 hover:text-green-700">O que fazemos</a>
-              <a href="#processo" onClick={() => setMobileMenuOpen(false)} className="font-medium text-gray-900 hover:text-green-700">Diferenciais</a>
-              <a href="#produtos" onClick={() => setMobileMenuOpen(false)} className="font-medium text-gray-900 hover:text-green-700">Produtos</a>
-              <a href="#contato" onClick={() => setMobileMenuOpen(false)} className="font-medium text-gray-900 hover:text-green-700">Contato</a>
+              <a href="#inicio" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-house-door text-black"></i> Início</a>
+              <a href="#sobre" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-info-circle text-black"></i> O que fazemos</a>
+              <a href="#processo" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-award text-black"></i> Diferenciais</a>
+              <a href="#produtos" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-box-seam text-black"></i> Produtos</a>
+              <a href="#contato" onClick={() => setMobileMenuOpen(false)} className="font-medium text-black hover:text-green-700 flex items-center gap-2 whitespace-nowrap"><i className="bi bi-envelope text-black"></i> Contato</a>
             </motion.div>
           )}
         </AnimatePresence>
@@ -82,23 +82,21 @@ export default function LandingPage() {
       <section id="inicio" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="/images/hero hero.png" alt="Plantação" className="absolute inset-0 w-full h-full object-cover opacity-100" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/10 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/60"></div>
+          <img src="/images/hero.jpeg" alt="Plantação" className="absolute inset-0 w-full h-full object-cover opacity-100" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl text-center md:text-left">
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-4xl md:text-6xl lg:text-7xl font-serif text-gray-900 mb-6 leading-tight">
-              A base forte para a sua <br className="md:hidden" /><span className="text-green-700 italic">lavoura.</span>
+        <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center mt-32 md:mt-56">
+          <div className="max-w-4xl text-center mx-auto">
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-2xl sm:text-3xl md:text-5xl font-serif text-gray-900 mb-6 leading-tight">
+              A base forte para a sua <span className="text-black italic">lavoura.</span>
             </motion.h1>
             
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg md:text-xl text-gray-900 mb-10 max-w-2xl font-medium mx-auto md:mx-0 bg-white/40 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/60">
-              <strong className="text-gray-900 font-bold block mb-2">Onde o Campo Encontra sua Melhor Performance.</strong>
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-base md:text-lg text-gray-900 mb-10 max-w-4xl font-medium mx-auto bg-white/40 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/60">
+              <strong className="text-gray-900 font-bold block mb-1">Onde o Campo Encontra sua Melhor Performance.</strong>
               Fertilizantes sólidos formulados para quem não aceita menos que a excelência. Qualidade em granel ou big bag, direto para o coração da sua lavoura.
             </motion.p>
             
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] shadow-lg shadow-green-900/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-all text-center flex items-center justify-center gap-3">
                 <i className="bi bi-whatsapp text-xl"></i> Fale com um Especialista
               </a>
